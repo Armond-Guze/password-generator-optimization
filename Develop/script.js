@@ -11,6 +11,7 @@ var upperCaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numbers = "0123456789";
 var specialCharacters = "!@#$%^&*()_+<>?=";
 
+//function that shows an alert if proper credentials are not met
 function generatePassword() {
   if (isNaN(passPrompt) || passPrompt < 8 || passPrompt > 128) {
     alert("Your password must be 8-128 characters! You must restart.");
@@ -35,6 +36,7 @@ function generatePassword() {
   var password = "";
   var length = parseInt(passPrompt);
 
+  //for loop creating password creating random password
   for (let i = 0; i < length; i++) {
     var passwordGen = Math.floor(Math.random() * allCharacters.length);
     password += allCharacters.charAt(passwordGen);
